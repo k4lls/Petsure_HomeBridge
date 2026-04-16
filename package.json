@@ -1,0 +1,33 @@
+{
+  "name": "homebridge-sure-petcare-platform",
+  "version": "0.2.0",
+  "description": "Enables Sure Petcare products (currently only doors) to work with Homekit. If you would like to see their other accessories supported feel free to reach out through this repo or to submit a pull request.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "node -c index.js && node -c accessories/SurePetcareAccessory.js && node -c accessories/SurePetcarePetFlap.js && node -c accessories/SurePetcareOccupancySensor.js && node -c lib/SurePetcareApi.js",
+    "test": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wylanswets/homebridge-sure-petcare-platform.git"
+  },
+  "keywords": [
+    "homebridge",
+    "homebridge-plugin"
+  ],
+  "engines": {
+    "node": ">=18.0.0",
+    "homebridge": ">=1.6.0"
+  },
+  "peerDependencies": {
+    "homebridge": ">=1.6.0"
+  },
+  "author": "Wylan Swets",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wylanswets/homebridge-sure-petcare-platform/issues"
+  },
+  "homepage": "https://github.com/wylanswets/homebridge-sure-petcare-platform#readme",
+  "dependencies": {},
+  "devDependencies": {}
+}
