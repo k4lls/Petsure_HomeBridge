@@ -1,0 +1,65 @@
+{
+  "pluginAlias": "PetSure",
+  "pluginType": "platform",
+  "singular": true,
+  "headerDisplay": "PetSure is a maintained fork of the original homebridge-sure-petcare-platform plugin, updated for modern Homebridge and Node.js versions.",
+  "footerDisplay": "Enter your Sure Petcare account credentials. Pet occupancy sensors are optional.",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "email": {
+        "title": "Sure Petcare Email",
+        "type": "string",
+        "required": true
+      },
+      "password": {
+        "title": "Sure Petcare Password",
+        "type": "string",
+        "required": true,
+        "format": "password"
+      },
+      "poll_interval": {
+        "title": "Poll Interval",
+        "type": "integer",
+        "default": 30,
+        "minimum": 5,
+        "description": "How often the plugin refreshes Sure Petcare device state, in seconds."
+      },
+      "pet_occupancy": {
+        "title": "Create Pet Occupancy Sensors",
+        "type": "boolean",
+        "default": false
+      },
+      "occupancy_flipped": {
+        "title": "Invert Occupancy State",
+        "type": "boolean",
+        "default": false
+      },
+      "lock_mode": {
+        "title": "Lock Mode When Locked From HomeKit",
+        "type": "integer",
+        "default": 1,
+        "oneOf": [
+          {
+            "title": "1 - In Only",
+            "enum": [
+              1
+            ]
+          },
+          {
+            "title": "2 - Out Only",
+            "enum": [
+              2
+            ]
+          },
+          {
+            "title": "3 - Fully Locked",
+            "enum": [
+              3
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,19 +1,24 @@
 {
-  "name": "homebridge-sure-petcare-platform",
-  "version": "0.2.0",
-  "description": "Enables Sure Petcare products (currently only doors) to work with Homekit. If you would like to see their other accessories supported feel free to reach out through this repo or to submit a pull request.",
+  "name": "homebridge-petsure",
+  "version": "1.0.0",
+  "description": "Maintained Homebridge plugin for Sure Petcare cat flaps, pet doors, and optional pet occupancy sensors.",
   "main": "index.js",
   "scripts": {
-    "lint": "node -c index.js && node -c accessories/SurePetcareAccessory.js && node -c accessories/SurePetcarePetFlap.js && node -c accessories/SurePetcareOccupancySensor.js && node -c lib/SurePetcareApi.js",
+    "lint": "node -c index.js && node -c accessories/BaseAccessory.js && node -c accessories/PetFlapAccessory.js && node -c accessories/OccupancySensorAccessory.js && node -c lib/PetSureApi.js",
     "test": "npm run lint"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wylanswets/homebridge-sure-petcare-platform.git"
+    "url": "git+https://github.com/k4lls/Petsure_HomeBridge.git"
   },
   "keywords": [
     "homebridge",
-    "homebridge-plugin"
+    "homebridge-plugin",
+    "sure-petcare",
+    "sureflap",
+    "pet-door",
+    "cat-flap",
+    "homekit"
   ],
   "engines": {
     "node": ">=18.0.0",
@@ -22,12 +27,18 @@
   "peerDependencies": {
     "homebridge": ">=1.6.0"
   },
-  "author": "Wylan Swets",
+  "author": "k4lls",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wylanswets/homebridge-sure-petcare-platform/issues"
+    "url": "https://github.com/k4lls/Petsure_HomeBridge/issues"
   },
-  "homepage": "https://github.com/wylanswets/homebridge-sure-petcare-platform#readme",
-  "dependencies": {},
-  "devDependencies": {}
+  "homepage": "https://github.com/k4lls/Petsure_HomeBridge#readme",
+  "files": [
+    "index.js",
+    "config.schema.json",
+    "LICENSE",
+    "README.md",
+    "accessories",
+    "lib"
+  ]
 }
