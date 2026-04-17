@@ -32,7 +32,7 @@ The original plugin appears to have gone unmaintained after 2020. This fork keep
 
 ## Install
 
-If you publish this package to npm:
+Install from npm:
 
 ```bash
 npm install -g homebridge-petsure
@@ -78,3 +78,10 @@ npm install -g /path/to/homebridge-petsure
 ## Notes
 
 This fork keeps the original MIT license and attribution so the maintenance history stays clear.
+
+## Changelog
+
+### 1.0.1
+
+- Cleans the npm package contents so only the maintained fork files are published.
+- Adds `displayName` metadata for cleaner Homebridge UI discovery.

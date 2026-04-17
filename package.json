@@ -1,6 +1,7 @@
 {
   "name": "homebridge-petsure",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "displayName": "Homebridge PetSure",
   "description": "Maintained Homebridge plugin for Sure Petcare cat flaps, pet doors, and optional pet occupancy sensors.",
   "main": "index.js",
   "scripts": {
