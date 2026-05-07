@@ -35,6 +35,12 @@
         "type": "boolean",
         "default": false
       },
+      "enable_flap": {
+        "title": "Show Cat Flap in HomeKit",
+        "type": "boolean",
+        "default": true,
+        "description": "Disable this to hide the cat flap lock from HomeKit. Useful if you only want occupancy sensors."
+      },
       "lock_mode": {
         "title": "Lock Mode When Locked From HomeKit",
         "type": "integer",
