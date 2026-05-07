@@ -1,8 +1,8 @@
 # PetSure Homebridge
 
-`HomeBridge SurePet v2` is a v2 compatible fork of the original `homebridge-sure-petcare-platform` project created by Wylan Swets.
+`PetSure Homebridge` is a maintained fork of the original `homebridge-sure-petcare-platform` project created by Wylan Swets.
 
-The original plugin appears to have gone unmaintained after 2020, and then was picked up by k4lls in April 2026. This fork should bring compatibility to v2.
+The original plugin appears to have gone unmaintained after 2020. This fork keeps the project transparent and up to date for current Homebridge releases and modern Node.js runtimes, including `Node.js 24`.
 
 ## What This Fork Changes
 
@@ -11,15 +11,13 @@ The original plugin appears to have gone unmaintained after 2020, and then was p
 - Improves accessory rehydration for cached Homebridge accessories.
 - Adds a Homebridge UI config schema.
 - Updates runtime support for modern Homebridge and Node.js versions.
-- v2 rediness (untested but codebase should support v1 and v2)
-- Added ability to hide Pet flap as door lock if only wanted for occupancy based automations.
 
 ## Attribution
 
 - Original project: `homebridge-sure-petcare-platform`
 - Original author: Wylan Swets
 - Original repository: `https://github.com/wylanswets/homebridge-sure-petcare-platform`
-
+- This repository is an independently maintained fork and modernization by `k4lls`.
 
 ## Runtime Support
 
