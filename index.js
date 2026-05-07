@@ -116,6 +116,10 @@ class PetSurePlatform {
   }
 
   addDevice(device) {
+    if (this.config.enable_flap === false) {
+      return;
+    }
+
     if (![3, 6].includes(device.product_id)) {
       return;
     }
@@ -133,9 +137,13 @@ class PetSurePlatform {
       return;
     }
 
+    if (existing instanceof PetFlapAccessory) {
+      return;
+    }
+
     this.accessories[uuid] = new PetFlapAccessory(
       this.log,
-      existing instanceof PetFlapAccessory ? existing.accessory : existing,
+      existing,
       device,
       this.petcareApi,
       this.config
@@ -152,9 +160,13 @@ class PetSurePlatform {
       return;
     }
 
+    if (existing instanceof OccupancySensorAccessory) {
+      return;
+    }
+
     this.accessories[uuid] = new OccupancySensorAccessory(
       this.log,
-      existing instanceof OccupancySensorAccessory ? existing.accessory : existing,
+      existing,
       pet,
       this.petcareApi,
       occupancyFlipped
